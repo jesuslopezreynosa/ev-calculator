@@ -1,15 +1,14 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="40" alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-  <span>{{ title }}</span>
-  <div class="spacer"></div>
+    <img width="40" alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    <span>{{ title }}</span>
+    <div class="spacer"></div>
 </div>
 
-
 <div class="content" role="main">
-  <!-- Highlight Card -->
-  <!-- <div class="card highlight-card card-small">
+    <!-- Highlight Card -->
+    <!-- <div class="card highlight-card card-small">
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
       <title>Rocket Ship</title>
       <g id="Group_83" data-name="Group 83" transform="translate(-141 -696)">
@@ -29,32 +28,81 @@
     </svg>
   </div> -->
 
-  <mat-card>
-    <mat-card-title>Conversions</mat-card-title>
+    <!-- <div>
+        <mat-card>
+            <mat-card-title>Conversions</mat-card-title>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Gallons to kWh</mat-label>
-      <input matInput placeholder="Gallons" [(ngModel)]="INPUT_GALTOKWH" type="number">
-    </mat-form-field>
-    <button mat-mini-fab color="primary" aria-label="Calculate"
-      (click)="gallonsGasolineToElectricityHandler(INPUT_GALTOKWH);">
-      <mat-icon>chevron_right</mat-icon>
-    </button>
-    <div *ngIf="OUTPUT_GALTOKWH">{{ OUTPUT_GALTOKWH }}</div>
+            <div class="card">
+                <mat-form-field appearance="fill">
+                    <mat-label>Gallons to kWh</mat-label>
+                    <input matInput placeholder="Gallons" [(ngModel)]="INPUT_GALTOKWH" type="number">
+                </mat-form-field>
+                <button mat-mini-fab color="primary" aria-label="Calculate"
+                    (click)="gallonsGasolineToElectricityHandler(INPUT_GALTOKWH);">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+                <div *ngIf="OUTPUT_GALTOKWH">{{ OUTPUT_GALTOKWH }}</div>
+            </div>
 
-    <mat-divider></mat-divider>
+            <div class="card">
+                <mat-form-field appearance="fill">
+                    <mat-label>kWh to Gallons</mat-label>
+                    <input matInput placeholder="kWh" [(ngModel)]="INPUT_KWHTOGAL" type="number">
+                </mat-form-field>
+                <button mat-mini-fab color="primary" aria-label="Calculate"
+                    (click)="electricityToGallonsGasolineHandler(INPUT_KWHTOGAL);">
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+                <div *ngIf="OUTPUT_KWHTOGAL">{{ OUTPUT_KWHTOGAL }}</div>
+            </div>
+        </mat-card>
+    </div>
+    <br /> -->
+    <div>
+        <mat-card>
+            <mat-card-title>Cost Calculators</mat-card-title>
 
-    <mat-form-field appearance="fill">
-      <mat-label>kWh to Gallons</mat-label>
-      <input matInput placeholder="kWh" [(ngModel)]="INPUT_KWHTOGAL" type="number">
-    </mat-form-field>
-    <button mat-mini-fab color="primary" aria-label="Calculate"
-      (click)="electricityToGallonsGasolineHandler(INPUT_KWHTOGAL);">
-      <mat-icon>chevron_right</mat-icon>
-    </button>
-    <div *ngIf="OUTPUT_KWHTOGAL">{{ OUTPUT_KWHTOGAL }}</div>
-  </mat-card>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Cost per kWh ($ / kWh)</mat-label>
+                    <input matInput placeholder="$ / kWh" [(ngModel)]="INPUT_COST_PER_KWH" type="number">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Miles</mat-label>
+                    <input matInput placeholder="Miles" [(ngModel)]="INPUT_COST_MILES" type="number">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Efficiency (Wh / mi)</mat-label>
+                    <input matInput placeholder="Efficiency (Wh / mi)" [(ngModel)]="INPUT_COST_EFFICIENCY" type="number">
+                </mat-form-field>
+                <br />
+                <div *ngIf="!(INPUT_COST_PER_KWH == 0 || INPUT_COST_MILES == 0 || INPUT_COST_EFFICIENCY == 0)">
+                    <div><strong>{{ getUsdCurrenctStringFromNumber(calculateCostFromEfficiency(INPUT_COST_PER_KWH, INPUT_COST_MILES, INPUT_COST_EFFICIENCY)) }}</strong> for <strong>{{ INPUT_COST_MILES * INPUT_COST_EFFICIENCY / 1000 }} kWh</strong></div>
+                    <br />
+                    <span>This is the energy same as in <strong>{{ getGasEquivalent().toFixed(2) }} gallons</strong> of gasoline, or <strong>{{ electricityToGallonsDiesel(INPUT_COST_MILES * INPUT_COST_EFFICIENCY / 1000).toFixed(2) }} gallons</strong> of Diesel.</span>
 
-  <!-- Footer -->
-  <footer></footer>
+                    <br />
+                    <br />
+                    <h4>Compare to the cost of a fossil vehicle:</h4>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fuel Efficiency (mi / gal)</mat-label>
+                        <input matInput placeholder="mi / gal" [(ngModel)]="INPUT_FOSSIL_MPG" type="number">
+                    </mat-form-field>
+                    <br />
+
+                    <div *ngIf="INPUT_FOSSIL_MPG !== 0">
+                        This is the equivalent if...
+                        <br />
+                        <span>- gasoline was <strong>{{ getGasPriceEquivalent() }} / gal</strong>,</span>
+                        <br />
+                        <span>- if your vehicle got <strong>{{ getMpgEquivalent().toFixed(0) }} miles / gal</strong></span>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </mat-card>
+    </div>
+
+    <!-- Footer -->
+    <footer></footer>
 </div>
