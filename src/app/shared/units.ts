@@ -1,14 +1,14 @@
 export enum Units {
     // Energy
-    KILOWATT_HOURS = 'kWh',
-    WATT_HOURS = 'Wh',
+    KILOWATT_HOURS,
+    WATT_HOURS,
 
     // Distance
-    MILES = 'mi',
-    KILOMETERS = 'km',
-    METERS = 'm',
+    MILES,
+    KILOMETERS,
+    METERS,
 
     // Volume
-    GALLONS = 'gal',
-    LITRES = 'L'
+    GALLONS,
+    LITRES
 }
