@@ -2,7 +2,7 @@
   "name": "ev-calculator",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "ng": "npx ng",
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --output-path docs --base-href /ev-calculator/ --c=production",
